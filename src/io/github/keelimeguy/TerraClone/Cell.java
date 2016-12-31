@@ -1,6 +1,5 @@
 package io.github.keelimeguy.TerraClone;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 

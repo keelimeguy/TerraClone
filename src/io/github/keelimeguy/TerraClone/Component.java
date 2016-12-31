@@ -1,7 +1,6 @@
 package io.github.keelimeguy.TerraClone;
 
 import java.applet.Applet;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -75,9 +74,9 @@ public class Component extends Applet implements Runnable {
 
 	public void render() {
 		Graphics g = screen.getGraphics();
-		
+
 		sky.render(g);
-		
+
 		level.render(g, sx, sy, pixel.width / Tile.tileSize, pixel.height / Tile.tileSize);
 		character.render(g);
 		inventory.render(g);
@@ -108,19 +107,19 @@ public class Component extends Applet implements Runnable {
 						long now = System.nanoTime();
 						delta += (now - lastTime) / ns;
 						lastTime = now;
-
+			
 						// Update 60 times a second
 						while (delta >= 1) {
 							tick();
 							//timera++;
 							updates++;
-
+			
 							delta--;
 						}
-
+			
 						render();
 						frames++;
-
+			
 						// Keep track of and display the game's ups and fps every second
 						if (System.currentTimeMillis() - timer >= 1000) {
 							timer += 1000;
